@@ -1,10 +1,12 @@
 import type { Config } from "tailwindcss";
+const { nextui } = require("@nextui-org/theme");
 
-export default {
+const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -14,5 +16,19 @@ export default {
       },
     },
   },
-  plugins: [],
+  darkMode: ["class"],
+  plugins: [
+    nextui({
+      themes: {
+        light: {
+          colors: {}, // light theme colors
+        },
+        dark: {
+          colors: {}, // dark theme colors
+        },
+      },
+    }),
+  ],
 } satisfies Config;
+
+export default config;
