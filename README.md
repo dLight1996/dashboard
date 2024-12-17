@@ -1,103 +1,103 @@
-# Dashboard
+# 管理后台
 
-A modern, responsive admin dashboard built with Next.js 14, NextUI, and Tailwind CSS.
+一个使用 Next.js 15、NextUI 和 Tailwind CSS 构建的现代化响应式管理后台。
 
-## Features
+## 功能特点
 
-- 🚀 Built with Next.js 14 App Router
-- 💅 Styled with NextUI and Tailwind CSS
-- 🔒 Authentication with NextAuth.js
-- 🌙 Dark/Light mode support
-- 📱 Fully responsive design
-- 🎯 Clean and intuitive interface
-- 🔍 Easy navigation with sidebar
-- 📊 Ready for data visualization
-- 🛡️ TypeScript support
-- 🔄 Prisma as ORM
+- 🚀 基于 Next.js 15 App Router 构建
+- 💅 使用 NextUI 和 Tailwind CSS 设计
+- 🔒 集成 NextAuth.js 身份认证
+- 🌙 支持暗色/亮色主题切换
+- 📱 完全响应式设计
+- 🎯 清晰直观的界面
+- 🔍 简便的侧边栏导航
+- 📊 数据可视化支持
+- 🛡️ TypeScript 类型支持
+- 🔄 使用 Prisma 作为 ORM
 
-## Tech Stack
+## 技术栈
 
-- **Framework**: [Next.js 14](https://nextjs.org/)
-- **UI Library**: [NextUI](https://nextui.org/)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
-- **Authentication**: [NextAuth.js](https://next-auth.js.org/)
-- **Database ORM**: [Prisma](https://www.prisma.io/)
-- **Language**: [TypeScript](https://www.typescriptlang.org/)
+- **框架**: [Next.js 15](https://nextjs.org/)
+- **UI 组件**: [NextUI](https://nextui.org/)
+- **样式**: [Tailwind CSS](https://tailwindcss.com/)
+- **认证**: [NextAuth.js](https://next-auth.js.org/)
+- **数据库 ORM**: [Prisma](https://www.prisma.io/)
+- **开发语言**: [TypeScript](https://www.typescriptlang.org/)
 
-## Getting Started
+## 快速开始
 
-### Prerequisites
+### 环境要求
 
 - Node.js 18+ 
-- npm or yarn
+- npm 或 yarn
 - Git
 
-### Installation
+### 安装步骤
 
-1. Clone the repository:
+1. 克隆仓库：
    ```bash
    git clone https://github.com/dLight1996/dashboard.git
    ```
 
-2. Install dependencies:
+2. 安装依赖：
    ```bash
    cd dashboard
    npm install
-   # or
+   # 或
    yarn install
    ```
 
-3. Set up environment variables:
-   Create a `.env` file in the root directory and add the following:
+3. 配置环境变量：
+   在根目录创建 `.env` 文件并添加以下内容：
    ```env
    DATABASE_URL="file:./dev.db"
    NEXTAUTH_URL="http://localhost:3000"
    NEXTAUTH_SECRET="your-secret-key"
    ```
 
-4. Set up the database:
+4. 初始化数据库：
    ```bash
    npx prisma generate
    npx prisma db push
    ```
 
-5. Run the development server:
+5. 启动开发服务器：
    ```bash
    npm run dev
-   # or
+   # 或
    yarn dev
    ```
 
-6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. 在浏览器中打开 [http://localhost:3000](http://localhost:3000) 查看结果。
 
-## Project Structure
+## 项目结构
 
 ```
 dashboard/
-├── prisma/                # Database schema and migrations
-├── public/               # Static files
+├── prisma/                # 数据库模型和迁移
+├── public/               # 静态资源文件
 ├── src/
-│   ├── app/             # Next.js app router pages
-│   ├── components/      # Reusable components
-│   ├── config/          # Configuration files
-│   ├── lib/             # Utility functions and libraries
-│   └── types/           # TypeScript type definitions
-├── .env                 # Environment variables
-└── package.json         # Project dependencies
+│   ├── app/             # Next.js 页面路由
+│   ├── components/      # 可复用组件
+│   ├── config/          # 配置文件
+│   ├── lib/             # 工具函数和库
+│   └── types/           # TypeScript 类型定义
+├── .env                 # 环境变量
+└── package.json         # 项目依赖
 ```
 
-## Development
+## 开发说明
 
-- **Routing**: Uses Next.js 14 App Router for file-system based routing
-- **State Management**: React's built-in hooks for local state
-- **Database**: Prisma ORM with SQLite (can be changed to PostgreSQL, MySQL, etc.)
-- **Authentication**: NextAuth.js with customizable providers
-- **Styling**: Tailwind CSS with NextUI components
+- **路由**: 使用 Next.js 15 App Router 基于文件系统的路由
+- **状态管理**: 使用 React 内置的 hooks 进行本地状态管理
+- **数据库**: 使用 Prisma ORM，默认 SQLite（可切换至 PostgreSQL、MySQL 等）
+- **认证**: 使用 NextAuth.js，支持自定义认证提供者
+- **样式**: 结合 NextUI 组件使用 Tailwind CSS
 
-## Contributing
+## 贡献指南
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+欢迎提交 Pull Request 来改进项目！
 
-## License
+## 许可证
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件。
