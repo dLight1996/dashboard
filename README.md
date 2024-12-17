@@ -1,4 +1,4 @@
-# 管理后台
+# 自用管理后台
 
 一个使用 Next.js 15、NextUI 和 Tailwind CSS 构建的现代化响应式管理后台。
 
@@ -93,11 +93,3 @@ dashboard/
 - **数据库**: 使用 Prisma ORM，默认 SQLite（可切换至 PostgreSQL、MySQL 等）
 - **认证**: 使用 NextAuth.js，支持自定义认证提供者
 - **样式**: 结合 NextUI 组件使用 Tailwind CSS
-
-## 贡献指南
-
-欢迎提交 Pull Request 来改进项目！
-
-## 许可证
-
-本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE) 文件。

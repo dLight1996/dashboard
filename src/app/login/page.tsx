@@ -5,7 +5,7 @@ import Image from "next/image";
 import { UserIcon, LockClosedIcon } from "@heroicons/react/24/outline";
 import { motion } from "framer-motion";
 import { signIn, useSession } from "next-auth/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 const floatingAnimation = {
@@ -28,11 +28,11 @@ export default function LoginPage() {
   const router = useRouter();
   const { status } = useSession();
 
-  // 如果已登录，重定向到 dashboard
-  if (status === 'authenticated') {
-    router.replace('/dashboard');
-    return null;
-  }
+  useEffect(() => {
+    if (status === 'authenticated') {
+      router.replace('/dashboard');
+    }
+  }, [status, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -59,6 +59,10 @@ export default function LoginPage() {
       setIsLoading(false);
     }
   };
+
+  if (status === 'authenticated') {
+    return null;
+  }
 
   return (
     <div className="min-h-screen relative">
