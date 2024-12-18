@@ -127,7 +127,14 @@ export default function DashboardLayout({
                 aria-label="Profile Actions" 
                 className="w-60"
                 classNames={{
-                  base: "bg-background",
+                  base: [
+                    "bg-white dark:bg-zinc-900",
+                    "border border-default-200 dark:border-default-100",
+                    "shadow-xl dark:shadow-2xl",
+                    "backdrop-blur-lg",
+                    "rounded-xl",
+                    "p-1",
+                  ].join(" "),
                 }}
               >
                 <DropdownItem key="profile" className="h-14 gap-2">
@@ -160,7 +167,7 @@ export default function DashboardLayout({
         </div>
       </div>
 
-      <div className="min-h-screen flex flex-col pt-16">
+      <div className="min-h-screen flex flex-col pt-16 bg-background">
         <div className="flex flex-1">
           {/* Sidebar */}
           <aside 
@@ -291,7 +298,7 @@ export default function DashboardLayout({
           </aside>
 
           {/* Main Content */}
-          <main className="flex-1 p-4 overflow-auto bg-background">
+          <main className="flex-1 p-4 overflow-auto">
             {children}
           </main>
         </div>
